@@ -28,8 +28,8 @@ const Navbar = () => {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-background/80 backdrop-blur-md border-b border-white/5 py-4"
-                    : "bg-transparent py-6"
+                ? "bg-background/80 backdrop-blur-md border-b border-white/5 py-4"
+                : "bg-transparent py-4 md:py-6"
                 }`}
         >
             <div className="container mx-auto px-4 lg:px-8 max-w-[1200px]">
@@ -76,9 +76,9 @@ const Navbar = () => {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`fixed inset-0 bg-background/95 backdrop-blur-lg z-40 transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed inset-0 bg-black/95 backdrop-blur-xl z-40 transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
                     }`}
-                style={{ top: "70px" }} // Adjust based on header height
+                style={{ top: "0", paddingTop: "80px" }} // Full screen overlay with padding for header
             >
                 <div className="flex flex-col items-center justify-center h-full space-y-8 pb-20">
                     {navLinks.map((link) => (

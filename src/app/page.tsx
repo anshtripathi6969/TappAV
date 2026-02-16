@@ -6,6 +6,7 @@ import WhyTappAV from "@/components/home/WhyTappAV";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import HowItWorks from "@/components/home/HowItWorks";
 import TappAVExperience from "@/components/home/TappAVExperience";
+import CinemaExperience from "@/components/home/CinemaExperience";
 import ConsultationBanner from "@/components/home/ConsultationBanner";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <FeaturedProducts />
       <HowItWorks />
       <TappAVExperience />
+      <CinemaExperience />
       <ConsultationBanner />
       <Footer />
     </main>

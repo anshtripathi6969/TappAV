@@ -136,14 +136,14 @@ const Hero = () => {
                         </span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight">
                         Experience Cinema <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500 animate-gradient-x">
                             At Home
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+                    <p className="text-base sm:text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light px-4">
                         Transform your living space with TappAV&apos;s premium audio-visual
                         solutions. Expertly curated for the ultimate immersive experience.
                     </p>

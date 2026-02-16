@@ -69,7 +69,7 @@ const ConsultationBanner = () => {
     return (
         <section
             ref={sectionRef}
-            className="py-32 relative overflow-hidden flex items-center justify-center min-h-[500px]"
+            className="py-20 md:py-32 relative overflow-hidden flex items-center justify-center min-h-[400px] md:min-h-[500px]"
             style={{
                 background: "linear-gradient(135deg, #0F1115 0%, #1a1d26 50%, #0F1115 100%)",
                 backgroundSize: "200% 200%"
@@ -103,7 +103,7 @@ const ConsultationBanner = () => {
                     <Calendar className="w-8 h-8 text-white" />
                 </div>
 
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
                     Ready to Build Your <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
                         Dream Home Theater?

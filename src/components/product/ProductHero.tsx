@@ -46,7 +46,7 @@ const ProductHero = () => {
     return (
         <section ref={containerRef} className="pt-32 pb-12 bg-background data-[loaded=true]:opacity-100">
             <div className="container mx-auto px-4 max-w-[1200px]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     {/* Left Column: Image Gallery */}
                     <div className="space-y-4 product-image">
                         <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5">
@@ -98,7 +98,7 @@ const ProductHero = () => {
                             <span className="text-gray-400 text-sm">({product.reviews} reviews)</span>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
                             {product.name}
                         </h1>
 

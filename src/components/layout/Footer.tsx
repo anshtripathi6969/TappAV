@@ -40,7 +40,7 @@ const Footer = () => {
 
             {/* Newsletter Section */}
             <div className="border-b border-white/5 bg-white/[0.02] backdrop-blur-sm">
-                <div className="container mx-auto px-4 max-w-[1200px] py-16">
+                <div className="container mx-auto px-4 max-w-[1200px] py-10 md:py-16">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="text-center md:text-left">
                             <h3 className="text-2xl font-bold text-white mb-2">Join Our Exclusive Club</h3>
@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div ref={contentRef} className="container mx-auto px-4 max-w-[1200px] py-20">
+            <div ref={contentRef} className="container mx-auto px-4 max-w-[1200px] py-12 md:py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
                     {/* Brand Column */}
                     <div className="lg:col-span-4 space-y-6">

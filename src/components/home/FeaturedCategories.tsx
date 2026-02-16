@@ -79,7 +79,7 @@ const FeaturedCategories = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-background relative">
+        <section ref={sectionRef} className="py-16 md:py-24 bg-background relative">
             {/* Background glow for ambience */}
             <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
 

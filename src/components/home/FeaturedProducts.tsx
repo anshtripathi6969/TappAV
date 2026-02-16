@@ -93,7 +93,7 @@ const FeaturedProducts = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-background relative border-t border-white/5">
+        <section ref={sectionRef} className="py-16 md:py-24 bg-background relative border-t border-white/5">
             {/* Ambient Background */}
             <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
 

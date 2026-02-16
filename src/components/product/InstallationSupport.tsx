@@ -5,7 +5,7 @@ const InstallationSupport = () => {
     return (
         <section className="py-20 bg-background border-t border-white/5">
             <div className="container mx-auto px-4 max-w-[1200px]">
-                <div className="bg-gradient-to-br from-secondary to-black rounded-2xl p-8 md:p-12 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="bg-gradient-to-br from-secondary to-black rounded-2xl p-6 md:p-12 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div className="space-y-4 max-w-2xl">
                         <h2 className="text-3xl font-bold text-white">Professional Installation & Support</h2>
                         <p className="text-gray-400 text-lg">

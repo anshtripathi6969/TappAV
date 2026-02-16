@@ -142,7 +142,7 @@ const HowItWorks = () => {
                         </div>
 
                         {/* Content Side (Right) */}
-                        <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center relative">
+                        <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center relative">
                             <div className="mb-8">
                                 <div className="flex items-center gap-3 mb-4">
                                     <span className="text-accent text-xs md:text-sm font-bold tracking-widest uppercase bg-accent/10 px-3 py-1 rounded-full border border-accent/20 shadow-[0_0_10px_rgba(37,99,235,0.2)]">

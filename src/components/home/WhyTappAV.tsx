@@ -81,7 +81,7 @@ const WhyTappAV = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-32 bg-background relative overflow-hidden">
+        <section ref={sectionRef} className="py-20 md:py-32 bg-background relative overflow-hidden">
             {/* Background Decor */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -99,7 +99,7 @@ const WhyTappAV = () => {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className={`tilt-card feature-card group relative p-8 rounded-2xl border border-white/5 bg-gradient-to-br ${feature.gradient} backdrop-blur-sm overflow-hidden`}
+                            className={`tilt-card feature-card group relative p-6 md:p-8 rounded-2xl border border-white/5 bg-gradient-to-br ${feature.gradient} backdrop-blur-sm overflow-hidden`}
                             data-tilt
                         >
                             <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
