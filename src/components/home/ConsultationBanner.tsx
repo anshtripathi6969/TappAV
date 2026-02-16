@@ -113,7 +113,7 @@ const ConsultationBanner = () => {
                 <Link href="/contact">
                     <Button
                         size="lg"
-                        className="bg-foreground hover:bg-foreground/90 hover:scale-105 shadow-xl hover:shadow-2xl transition-all duration-300 border-none font-bold text-lg px-10 py-5 text-background"
+                        className="bg-foreground hover:bg-foreground/90 hover:scale-105 shadow-xl hover:shadow-2xl transition-all duration-300 border-none font-bold text-lg px-10 py-5 !text-background"
                     >
                         Book Free Consultation
                     </Button>

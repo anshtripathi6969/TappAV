@@ -49,7 +49,7 @@ const ProductHero = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     {/* Left Column: Image Gallery */}
                     <div className="space-y-4 product-image">
-                        <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                        <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-border bg-secondary/50">
                             <Image
                                 src={mainImage}
                                 alt={product.name}
@@ -66,7 +66,7 @@ const ProductHero = () => {
                                 <button
                                     key={idx}
                                     onClick={() => setMainImage(img)}
-                                    className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-colors ${mainImage === img ? "border-accent" : "border-transparent hover:border-white/20"
+                                    className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-colors ${mainImage === img ? "border-accent" : "border-transparent hover:border-border"
                                         }`}
                                 >
                                     <Image
@@ -78,10 +78,10 @@ const ProductHero = () => {
                                 </button>
                             ))}
                             {/* Placeholders for more thumbs */}
-                            <div className="bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-500 text-xs">
+                            <div className="bg-secondary/50 rounded-lg border border-border flex items-center justify-center text-muted-foreground text-xs">
                                 +2 More
                             </div>
-                            <div className="bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-500 text-xs">
+                            <div className="bg-secondary/50 rounded-lg border border-border flex items-center justify-center text-muted-foreground text-xs">
                                 Video
                             </div>
                         </div>
@@ -90,30 +90,30 @@ const ProductHero = () => {
                     {/* Right Column: Product Info */}
                     <div className="flex flex-col product-info">
                         <div className="mb-2 flex items-center space-x-2">
-                            <div className="flex text-yellow-500">
+                            <div className="flex text-amber-500">
                                 {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-current" : "text-gray-600"}`} />
+                                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-current" : "text-muted"}`} />
                                 ))}
                             </div>
-                            <span className="text-gray-400 text-sm">({product.reviews} reviews)</span>
+                            <span className="text-muted-foreground text-sm">({product.reviews} reviews)</span>
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
                             {product.name}
                         </h1>
 
                         <div className="text-3xl font-bold text-accent mb-6">{product.price}</div>
 
-                        <p className="text-gray-300 leading-relaxed mb-8 border-b border-white/10 pb-8">
+                        <p className="text-muted-foreground leading-relaxed mb-8 border-b border-border pb-8">
                             {product.description}
                         </p>
 
                         <div className="space-y-6 mb-8">
-                            <div className="flex items-center space-x-3 text-gray-300">
+                            <div className="flex items-center space-x-3 text-foreground">
                                 <Check className="w-5 h-5 text-green-500" />
                                 <span>In Stock - Ships ready to install</span>
                             </div>
-                            <div className="flex items-center space-x-3 text-gray-300">
+                            <div className="flex items-center space-x-3 text-foreground">
                                 <Check className="w-5 h-5 text-green-500" />
                                 <span>Free Professional Consultation Included</span>
                             </div>
@@ -121,15 +121,15 @@ const ProductHero = () => {
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-8">
                             <Button size="lg" className="flex-1">Add to Cart</Button>
-                            <Button variant="secondary" size="lg" className="flex-1">Enquire Now</Button>
+                            <Button variant="secondary" size="lg" className="flex-1 border border-border hover:bg-secondary text-foreground">Enquire Now</Button>
                         </div>
 
-                        <div className="flex space-x-6 text-gray-400 text-sm">
-                            <button className="flex items-center space-x-2 hover:text-white transition-colors">
+                        <div className="flex space-x-6 text-muted-foreground text-sm">
+                            <button className="flex items-center space-x-2 hover:text-foreground transition-colors">
                                 <Heart className="w-4 h-4" />
                                 <span>Add to Wishlist</span>
                             </button>
-                            <button className="flex items-center space-x-2 hover:text-white transition-colors">
+                            <button className="flex items-center space-x-2 hover:text-foreground transition-colors">
                                 <Share2 className="w-4 h-4" />
                                 <span>Share</span>
                             </button>

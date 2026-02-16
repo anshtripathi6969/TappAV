@@ -20,12 +20,12 @@ const Button: React.FC<ButtonProps> = ({
 
     const variants = {
         primary:
-            "bg-accent text-white hover:bg-blue-700 focus:ring-accent shadow-[0_4px_14px_0_rgba(37,99,235,0.39)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.23)] hover:-translate-y-0.5",
+            "bg-accent text-white hover:bg-accent/90 focus:ring-accent shadow-md hover:shadow-lg hover:-translate-y-0.5",
         secondary:
-            "bg-secondary text-white hover:bg-gray-800 focus:ring-secondary border border-gray-800",
+            "bg-secondary text-foreground hover:bg-secondary/80 focus:ring-secondary border border-border",
         outline:
-            "bg-transparent border border-white/20 text-white hover:bg-white/10 focus:ring-white",
-        ghost: "bg-transparent text-gray-300 hover:text-white hover:bg-white/5",
+            "bg-transparent border border-border text-foreground hover:bg-secondary focus:ring-foreground",
+        ghost: "bg-transparent text-muted-foreground hover:text-foreground hover:bg-secondary",
     };
 
     const sizes = {

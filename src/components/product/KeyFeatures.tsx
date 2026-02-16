@@ -58,17 +58,17 @@ const KeyFeatures = () => {
     ];
 
     return (
-        <section className="bg-secondary/50 border-y border-white/5 py-12">
+        <section className="bg-secondary/30 border-y border-border py-12">
             <div className="container mx-auto px-4 max-w-[1200px]">
                 <div ref={containerRef} className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {features.map((feature, index) => (
                         <div key={index} className="feature-item flex flex-col items-center text-center space-y-3 group hover:scale-105 transition-transform duration-300">
-                            <div className="p-3 rounded-full bg-white/5 group-hover:bg-accent/10 transition-colors">
+                            <div className="p-3 rounded-full bg-card border border-border group-hover:bg-accent/10 transition-colors shadow-sm">
                                 {feature.icon}
                             </div>
                             <div>
-                                <h3 className="text-white font-bold text-lg">{feature.label}</h3>
-                                <p className="text-gray-400 text-sm">{feature.sublabel}</p>
+                                <h3 className="text-foreground font-bold text-lg">{feature.label}</h3>
+                                <p className="text-muted-foreground text-sm">{feature.sublabel}</p>
                             </div>
                         </div>
                     ))}

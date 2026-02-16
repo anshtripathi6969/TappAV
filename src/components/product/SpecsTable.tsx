@@ -15,23 +15,23 @@ const SpecsTable = () => {
     ];
 
     return (
-        <section className="py-20 bg-secondary/30">
+        <section className="py-20 bg-background">
             <div className="container mx-auto px-4 max-w-[1000px]">
-                <h2 className="text-3xl font-bold text-white mb-12 text-center">Technical Specifications</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Technical Specifications</h2>
 
-                <div className="bg-background rounded-xl border border-white/10 overflow-hidden shadow-2xl">
+                <div className="bg-card rounded-xl border border-border overflow-hidden shadow-lg">
                     <table className="w-full text-left border-collapse">
                         <tbody>
                             {specs.map((spec, index) => (
                                 <tr
                                     key={index}
-                                    className={`border-b border-white/5 hover:bg-white/5 transition-colors ${index % 2 === 0 ? "bg-white/[0.02]" : "bg-transparent"
+                                    className={`border-b border-border hover:bg-secondary/50 transition-colors ${index % 2 === 0 ? "bg-secondary/30" : "bg-card"
                                         }`}
                                 >
-                                    <th className="py-4 px-6 md:px-12 font-medium text-gray-300 w-1/3 md:w-1/4">
+                                    <th className="py-4 px-6 md:px-12 font-medium text-muted-foreground w-1/3 md:w-1/4">
                                         {spec.label}
                                     </th>
-                                    <td className="py-4 px-6 md:px-12 text-white font-semibold">
+                                    <td className="py-4 px-6 md:px-12 text-foreground font-semibold">
                                         {spec.value}
                                     </td>
                                 </tr>
