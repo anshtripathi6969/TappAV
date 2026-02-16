@@ -10,7 +10,7 @@ const ProductHero = () => {
     // Mock data for Epson 5050UB
     const product = {
         name: "Epson Home Cinema 5050UB",
-        price: "$2,999.00",
+        price: "₹53,999",
         rating: 4.8,
         reviews: 124,
         description: "Experience the ultimate 4K home theater projection with the Epson Home Cinema 5050UB. Featuring advanced 3LCD technology and HDR support for stunning color and contrast.",
