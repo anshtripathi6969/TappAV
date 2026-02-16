@@ -120,7 +120,7 @@ const CinemaExperience = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-20 md:py-32 bg-[#0F1115] relative overflow-hidden">
+        <section ref={sectionRef} className="py-20 md:py-32 bg-background relative overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
 
@@ -129,10 +129,10 @@ const CinemaExperience = () => {
 
             <div className="container mx-auto px-4 max-w-[1400px] relative z-10">
                 <div className="cinema-header text-center mb-16">
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                    <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
                         Tapp<span className="text-accent">AV</span> Cinema Experience
                     </h2>
-                    <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+                    <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
                         Take a look at some of the most enjoyed and best Calibrated home cinema spaces.
                     </p>
                 </div>

@@ -93,7 +93,7 @@ const FeaturedProducts = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-16 md:py-24 bg-background relative border-t border-white/5">
+        <section ref={sectionRef} className="py-16 md:py-24 bg-background relative border-t border-border">
             {/* Ambient Background */}
             <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
 
@@ -103,12 +103,12 @@ const FeaturedProducts = () => {
                         <span className="text-accent text-sm font-bold tracking-widest uppercase block mb-3">
                             Best Sellers
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
                             Featured Products
                         </h2>
                     </div>
                     <Link href="/shop" className="hidden md:block">
-                        <Button variant="outline" className="border-white/20 hover:bg-white/5">
+                        <Button variant="outline" className="border-border hover:bg-accent/5 text-foreground">
                             View All Products
                         </Button>
                     </Link>
@@ -132,9 +132,9 @@ const FeaturedProducts = () => {
 
 const ProductCard = ({ product }: { product: any }) => {
     return (
-        <div className="group relative bg-[#15171E] rounded-2xl overflow-hidden border border-white/5 hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 flex flex-col h-full">
+        <div className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 flex flex-col h-full">
             {/* Image Container */}
-            <div className="relative h-[300px] w-full p-8 flex items-center justify-center bg-gradient-to-b from-white/5 to-transparent overflow-hidden">
+            <div className="relative h-[300px] w-full p-8 flex items-center justify-center bg-gradient-to-b from-foreground/5 to-transparent overflow-hidden">
                 <Image
                     src={product.image}
                     alt={product.name}
@@ -151,14 +151,14 @@ const ProductCard = ({ product }: { product: any }) => {
                 </div>
 
                 {/* Wishlist Button */}
-                <button className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-red-500/20 hover:text-red-500 transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-[-10px] group-hover:translate-y-0">
+                <button className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/50 backdrop-blur-md flex items-center justify-center text-foreground hover:bg-red-500/20 hover:text-red-500 transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-[-10px] group-hover:translate-y-0 border border-border">
                     <Heart className="w-5 h-5" />
                 </button>
 
                 {/* Overlay Actions */}
-                <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/40 backdrop-blur-[2px]">
                     <Link href={`/product/${product.slug}`}>
-                        <button className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                        <button className="w-12 h-12 rounded-full bg-background text-foreground flex items-center justify-center hover:scale-110 transition-transform shadow-lg border border-border">
                             <Eye className="w-5 h-5" />
                         </button>
                     </Link>
@@ -172,20 +172,20 @@ const ProductCard = ({ product }: { product: any }) => {
             <div className="p-6 flex flex-col flex-grow relative">
                 <div className="flex mb-3">
                     {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`w-3.5 h-3.5 ${i < product.rating ? "text-amber-400 fill-amber-400" : "text-gray-700"}`} />
+                        <Star key={i} className={`w-3.5 h-3.5 ${i < product.rating ? "text-amber-400 fill-amber-400" : "text-border"}`} />
                     ))}
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
                     {product.name}
                 </h3>
 
-                <p className="text-gray-400 text-sm mb-6 line-clamp-2 flex-grow">
+                <p className="text-muted-foreground text-sm mb-6 line-clamp-2 flex-grow">
                     {product.description}
                 </p>
 
-                <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <span className="text-2xl font-bold text-white">
+                <div className="flex items-center justify-between pt-4 border-t border-border">
+                    <span className="text-2xl font-bold text-foreground">
                         {product.price}
                     </span>
                     <span className="text-xs text-accent uppercase font-semibold tracking-wider group-hover:underline cursor-pointer">

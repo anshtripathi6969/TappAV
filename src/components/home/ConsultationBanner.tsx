@@ -69,11 +69,7 @@ const ConsultationBanner = () => {
     return (
         <section
             ref={sectionRef}
-            className="py-20 md:py-32 relative overflow-hidden flex items-center justify-center min-h-[400px] md:min-h-[500px]"
-            style={{
-                background: "linear-gradient(135deg, #0F1115 0%, #1a1d26 50%, #0F1115 100%)",
-                backgroundSize: "200% 200%"
-            }}
+            className="py-20 md:py-32 relative overflow-hidden flex items-center justify-center min-h-[400px] md:min-h-[500px] bg-secondary"
         >
             {/* Animated Glow Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -87,7 +83,7 @@ const ConsultationBanner = () => {
                 {[...Array(10)].map((_, i) => (
                     <div
                         key={i}
-                        className="absolute w-2 h-2 bg-white/5 rounded-full blur-[1px]"
+                        className="absolute w-2 h-2 bg-foreground/5 rounded-full blur-[1px]"
                         style={{
                             top: `${Math.random() * 100}%`,
                             left: `${Math.random() * 100}%`,
@@ -103,28 +99,27 @@ const ConsultationBanner = () => {
                     <Calendar className="w-8 h-8 text-white" />
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight">
                     Ready to Build Your <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted-foreground">
                         Dream Home Theater?
                     </span>
                 </h2>
 
-                <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                     Our experts are ready to help you design the perfect audio-visual experience tailored to your space and budget.
                 </p>
 
                 <Link href="/contact">
                     <Button
                         size="lg"
-                        className="bg-white hover:bg-gray-100 hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 border-none font-bold text-lg px-10 py-5 text-black"
-                        style={{ color: "#000000" }}
+                        className="bg-foreground hover:bg-foreground/90 hover:scale-105 shadow-xl hover:shadow-2xl transition-all duration-300 border-none font-bold text-lg px-10 py-5 text-background"
                     >
                         Book Free Consultation
                     </Button>
                 </Link>
 
-                <p className="mt-6 text-sm text-gray-500">
+                <p className="mt-6 text-sm text-muted-foreground">
                     No commitment required. 100% Free Consultation.
                 </p>
             </div>

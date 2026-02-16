@@ -74,17 +74,17 @@ const HomeCinemaGuide = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-[#0F1115] relative overflow-hidden">
+        <section ref={sectionRef} className="py-24 bg-background relative overflow-hidden">
             {/* Background Gradients */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none opacity-30" />
 
             <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
                 <div ref={titleRef} className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                         Home Cinema Guide
                     </h2>
-                    <p className="text-gray-400 text-lg">
+                    <p className="text-muted-foreground text-lg">
                         Expert insights, reviews, and guides to help you build your dream setup.
                     </p>
                 </div>
@@ -97,7 +97,7 @@ const HomeCinemaGuide = () => {
                         >
                             {/* Image Side */}
                             <div className="w-full md:w-1/2 relative group">
-                                <Link href={blog.link} target="_blank" className="block relative aspect-video rounded-3xl overflow-hidden border border-white/10 hover:border-accent/50 transition-colors duration-500">
+                                <Link href={blog.link} target="_blank" className="block relative aspect-video rounded-3xl overflow-hidden border border-border hover:border-accent/50 transition-colors duration-500">
                                     <Image
                                         src={blog.image}
                                         alt={blog.title}
@@ -108,7 +108,7 @@ const HomeCinemaGuide = () => {
 
                                     {/* Tag Overlay */}
                                     <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
-                                        <span className="text-xs font-semibold text-white uppercase tracking-wider">
+                                        <span className="text-xs font-semibold text-foreground uppercase tracking-wider">
                                             {blog.category}
                                         </span>
                                     </div>
@@ -117,23 +117,23 @@ const HomeCinemaGuide = () => {
 
                             {/* Content Side */}
                             <div className="w-full md:w-1/2 space-y-6">
-                                <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight hover:text-accent transition-colors duration-300">
+                                <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight hover:text-accent transition-colors duration-300">
                                     <Link href={blog.link} target="_blank">
                                         {blog.title}
                                     </Link>
                                 </h3>
 
-                                <p className="text-gray-400 text-lg leading-relaxed line-clamp-4">
+                                <p className="text-muted-foreground text-lg leading-relaxed line-clamp-4">
                                     {blog.excerpt}
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
-                                    <span className="text-sm font-semibold text-gray-500 uppercase tracking-widest">
+                                    <span className="text-sm font-semibold text-muted-foreground uppercase tracking-widest">
                                         {blog.readTime}..
                                     </span>
 
                                     <div className="flex gap-4">
-                                        <span className="px-4 py-1.5 rounded-full border border-white/20 text-sm text-gray-300 hover:bg-white/5 transition-colors cursor-default">
+                                        <span className="px-4 py-1.5 rounded-full border border-border text-sm text-muted-foreground hover:bg-accent/5 transition-colors cursor-default">
                                             Blogs
                                         </span>
                                     </div>

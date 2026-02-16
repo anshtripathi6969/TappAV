@@ -83,14 +83,14 @@ const WhyTappAV = () => {
     return (
         <section ref={sectionRef} className="py-20 md:py-32 bg-background relative overflow-hidden">
             {/* Background Decor */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
             <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
                 <div className="text-center mb-20" ref={titleRef}>
                     <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">The TappAV Difference</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose TappAV?</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Why Choose TappAV?</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                         We don&apos;t just sell equipment; we craft experiences. Discover what sets us apart from the rest.
                     </p>
                 </div>
@@ -99,19 +99,19 @@ const WhyTappAV = () => {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className={`tilt-card feature-card group relative p-6 md:p-8 rounded-2xl border border-white/5 bg-gradient-to-br ${feature.gradient} backdrop-blur-sm overflow-hidden`}
+                            className={`tilt-card feature-card group relative p-6 md:p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm overflow-hidden`}
                             data-tilt
                         >
-                            <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                             <div className="relative z-10 flex flex-col items-center text-center h-full">
-                                <div className="mb-8 p-5 rounded-2xl bg-black/40 border border-white/10 shadow-lg group-hover:shadow-accent/20 transition-all duration-300">
+                                <div className="mb-8 p-5 rounded-2xl bg-background/80 border border-border shadow-lg group-hover:shadow-accent/20 transition-all duration-300">
                                     {feature.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
+                                <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors">
                                     {feature.title}
                                 </h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+                                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
                                     {feature.description}
                                 </p>
                             </div>

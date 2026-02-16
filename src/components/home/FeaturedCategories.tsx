@@ -87,16 +87,16 @@ const FeaturedCategories = () => {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div className="max-w-2xl">
                         <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Curated Collections</span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                             Browse Categories
                         </h2>
-                        <p className="text-gray-400 text-lg">
+                        <p className="text-muted-foreground text-lg">
                             Explore our curated selection of premium AV gear, designed to elevate your sensory experience.
                         </p>
                     </div>
                     <Link
                         href="/shop"
-                        className="group flex items-center text-white pb-1 border-b border-white/30 hover:border-accent transition-colors"
+                        className="group flex items-center text-foreground pb-1 border-b border-border hover:border-accent transition-colors"
                     >
                         <span className="mr-2 text-sm font-medium uppercase tracking-wide">View All</span>
                         <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-accent" />

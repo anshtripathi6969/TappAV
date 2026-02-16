@@ -79,10 +79,10 @@ const CustomerTestimonials = () => {
     const getThumbnail = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 
     return (
-        <section ref={sectionRef} className="py-24 md:py-32 bg-white relative overflow-hidden">
+        <section ref={sectionRef} className="py-24 md:py-32 bg-background relative overflow-hidden">
             <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
                 <div className="testimonial-header text-center mb-16">
-                    <h2 className="text-4xl md:text-6xl font-bold text-black mb-4 tracking-tight">
+                    <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
                         Hear From Our Customers
                     </h2>
                     <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
@@ -90,7 +90,7 @@ const CustomerTestimonials = () => {
 
                 <div ref={contentRef} className="max-w-[1000px] mx-auto">
                     {/* Video Player Container */}
-                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl bg-black group mb-12">
+                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl bg-black group mb-12 border border-border">
                         {isPlaying ? (
                             <iframe
                                 width="100%"
@@ -114,7 +114,7 @@ const CustomerTestimonials = () => {
 
                                 <button
                                     onClick={() => setIsPlaying(true)}
-                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:bg-accent hover:border-accent group shadow-lg"
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-background/20 backdrop-blur-md border border-border/40 flex items-center justify-center text-foreground transition-all duration-300 hover:scale-110 hover:bg-accent hover:border-accent group shadow-lg"
                                 >
                                     <Play className="w-8 h-8 fill-current ml-1" />
                                 </button>
@@ -124,29 +124,29 @@ const CustomerTestimonials = () => {
                         {/* Navigation Arrows (Absolute to Video) */}
                         <button
                             onClick={prevSlide}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center text-white hover:bg-accent hover:scale-110 transition-all duration-300 border border-white/10 z-20"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/30 backdrop-blur-md flex items-center justify-center text-foreground hover:bg-accent hover:scale-110 transition-all duration-300 border border-border/10 z-20"
                         >
                             <ChevronLeft className="w-6 h-6" />
                         </button>
                         <button
                             onClick={nextSlide}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center text-white hover:bg-accent hover:scale-110 transition-all duration-300 border border-white/10 z-20"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/30 backdrop-blur-md flex items-center justify-center text-foreground hover:bg-accent hover:scale-110 transition-all duration-300 border border-border/10 z-20"
                         >
                             <ChevronRight className="w-6 h-6" />
                         </button>
                     </div>
 
                     {/* Quote Carousel */}
-                    <div className="relative bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
+                    <div className="relative bg-secondary/50 rounded-2xl p-8 md:p-12 shadow-lg border border-border">
                         <Quote className="absolute top-8 left-8 w-12 h-12 text-accent/20 rotate-180" />
                         <Quote className="absolute bottom-8 right-8 w-12 h-12 text-accent/20" />
 
                         <div className="relative overflow-hidden min-h-[150px] flex items-center justify-center">
                             <div className="text-center px-4 md:px-12">
-                                <p className="text-xl md:text-2xl text-gray-700 leading-relaxed italic mb-8 font-light">
+                                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed italic mb-8 font-light">
                                     "{testimonials[currentIndex].quote}"
                                 </p>
-                                <h4 className="text-lg font-bold text-black flex items-center justify-center gap-3">
+                                <h4 className="text-lg font-bold text-foreground flex items-center justify-center gap-3">
                                     <span className="w-8 h-[1px] bg-accent" />
                                     {testimonials[currentIndex].name}
                                     <span className="w-8 h-[1px] bg-accent" />
@@ -163,7 +163,7 @@ const CustomerTestimonials = () => {
                                         setIsPlaying(false);
                                         setCurrentIndex(idx);
                                     }}
-                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === idx ? "bg-accent w-8" : "bg-gray-300 hover:bg-gray-400"
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === idx ? "bg-accent w-8" : "bg-muted-foreground/30 hover:bg-muted-foreground"
                                         }`}
                                 />
                             ))}
