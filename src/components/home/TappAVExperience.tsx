@@ -63,33 +63,33 @@ const TappAVExperience = () => {
 
             <div className="container mx-auto px-4 max-w-[1000px] relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">The TappAV Difference</h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">The TappAV Difference</h2>
+                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                         Elevating home entertainment standards beyond the ordinary. See why discerning clients choose us.
                     </p>
                 </div>
 
                 <div ref={cardRef} className="relative">
                     {/* Main Comparison Container */}
-                    <div className="bg-[#15171E] border border-white/5 rounded-3xl overflow-hidden shadow-2xl relative">
+                    <div className="bg-card border border-border rounded-3xl overflow-hidden shadow-2xl relative">
                         {/* Header Row - Sticky on Mobile */}
-                        <div className="grid grid-cols-12 border-b border-white/5 bg-[#15171E]/95 backdrop-blur-md p-4 md:p-8 items-center cursor-default sticky top-0 z-20">
-                            <div className="col-span-12 md:col-span-6 font-bold text-gray-400 uppercase tracking-widest text-sm mb-2 md:mb-0 hidden md:block">Features</div>
+                        <div className="grid grid-cols-12 border-b border-border bg-card/95 backdrop-blur-md p-4 md:p-8 items-center cursor-default sticky top-0 z-20">
+                            <div className="col-span-12 md:col-span-6 font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2 md:mb-0 hidden md:block">Features</div>
 
                             {/* Mobile Header Label */}
-                            <div className="col-span-12 md:hidden text-center text-gray-500 text-xs uppercase tracking-widest mb-4">Comparison</div>
+                            <div className="col-span-12 md:hidden text-center text-muted-foreground text-xs uppercase tracking-widest mb-4">Comparison</div>
 
                             <div className="col-span-6 md:col-span-3 text-center relative">
-                                <h3 className="text-white font-bold text-lg md:text-2xl drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">TappAV</h3>
+                                <h3 className="text-foreground font-bold text-lg md:text-2xl drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">TappAV</h3>
                                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10"></div>
                             </div>
                             <div className="col-span-6 md:col-span-3 text-center">
-                                <h3 className="text-gray-500 font-bold text-base md:text-xl">Typical AV</h3>
+                                <h3 className="text-muted-foreground font-bold text-base md:text-xl">Typical AV</h3>
                             </div>
                         </div>
 
                         {/* Feature Rows */}
-                        <div className="divide-y divide-white/5 relative">
+                        <div className="divide-y divide-border relative">
                             {/* Decorative Highlight Column for TappAV (Desktop: 25% width at 50% left) */}
                             <div className="absolute top-0 bottom-0 left-[50%] md:left-[50%] w-[50%] md:w-[25%] bg-accent/5 border-x border-accent/10 pointer-events-none z-0 hidden md:block"></div>
 
@@ -97,9 +97,9 @@ const TappAVExperience = () => {
                             <div className="absolute top-0 bottom-0 left-0 right-1/2 bg-accent/5 border-r border-accent/10 z-0 md:hidden"></div>
 
                             {features.map((feature, index) => (
-                                <div key={index} className="grid grid-cols-12 p-4 md:p-6 items-center hover:bg-white/5 transition-colors relative z-10 feature-row group">
+                                <div key={index} className="grid grid-cols-12 p-4 md:p-6 items-center hover:bg-secondary/50 transition-colors relative z-10 feature-row group">
                                     {/* Feature Name */}
-                                    <div className="col-span-12 md:col-span-6 text-gray-300 font-medium text-base md:text-lg mb-3 md:mb-0 text-center md:text-left group-hover:text-white transition-colors">
+                                    <div className="col-span-12 md:col-span-6 text-foreground font-medium text-base md:text-lg mb-3 md:mb-0 text-center md:text-left group-hover:text-accent transition-colors">
                                         {feature.name}
                                     </div>
 
@@ -121,11 +121,11 @@ const TappAVExperience = () => {
                                     {/* Typical AV Value (Right on Mobile) */}
                                     <div className="col-span-6 md:col-span-3 flex justify-center items-center">
                                         {feature.typical ? (
-                                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/10 text-gray-400 flex items-center justify-center">
+                                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-secondary text-muted-foreground flex items-center justify-center">
                                                 <Check className="w-3 h-3 md:w-4 md:h-4" />
                                             </div>
                                         ) : (
-                                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/5 text-gray-600 flex items-center justify-center">
+                                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-secondary/50 text-muted-foreground flex items-center justify-center">
                                                 <X className="w-3 h-3 md:w-4 md:h-4" />
                                             </div>
                                         )}

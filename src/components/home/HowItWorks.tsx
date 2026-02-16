@@ -86,14 +86,14 @@ const HowItWorks = () => {
         <section ref={sectionRef} className="py-24 bg-background relative overflow-hidden">
             <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">How It Works</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">Your journey to the ultimate home theater experience, simplified.</p>
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">How It Works</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto">Your journey to the ultimate home theater experience, simplified.</p>
                 </div>
 
                 {/* Stepper */}
                 <div className="flex justify-between items-center mb-16 relative hidden md:flex">
                     {/* Connecting Line */}
-                    <div className="absolute top-1/2 left-0 w-full h-1 bg-white/10 -translate-y-1/2 z-0"></div>
+                    <div className="absolute top-1/2 left-0 w-full h-1 bg-border -translate-y-1/2 z-0"></div>
                     <div
                         className="absolute top-1/2 left-0 h-1 bg-accent -translate-y-1/2 z-0 transition-all duration-700 ease-in-out"
                         style={{ width: `${(currentStep / (steps.length - 1)) * 100}%` }}
@@ -103,11 +103,11 @@ const HowItWorks = () => {
                         <button
                             key={step.id}
                             onClick={() => setCurrentStep(index)}
-                            className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-300 border-2 ${index <= currentStep ? "bg-accent border-accent text-white scale-110 shadow-[0_0_20px_rgba(37,99,235,0.5)]" : "bg-background border-white/20 text-gray-500 hover:border-accent/50"}`}
+                            className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-300 border-2 ${index <= currentStep ? "bg-accent border-accent text-white scale-110 shadow-[0_0_20px_rgba(37,99,235,0.5)]" : "bg-background border-border text-muted-foreground hover:border-accent/50"}`}
                         >
                             {index + 1}
                             {/* Label below step */}
-                            <span className={`absolute -bottom-10 text-xs font-medium whitespace-nowrap transition-colors duration-300 ${index <= currentStep ? "text-white" : "text-gray-600"}`}>
+                            <span className={`absolute -bottom-10 text-xs font-medium whitespace-nowrap transition-colors duration-300 ${index <= currentStep ? "text-foreground" : "text-muted-foreground"}`}>
                                 {step.title}
                             </span>
                         </button>
@@ -115,30 +115,30 @@ const HowItWorks = () => {
                 </div>
 
                 {/* Main Content Card */}
-                <div className="bg-[#15171E] rounded-3xl border border-white/5 overflow-hidden shadow-2xl relative min-h-[450px] flex flex-col">
+                <div className="bg-card rounded-3xl border border-border overflow-hidden shadow-2xl relative min-h-[450px] flex flex-col">
 
                     {/* Background Grid Pattern (CSS-based) */}
                     <div className="absolute inset-0 z-0 opacity-20 pointer-events-none"
-                        style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)', backgroundSize: '40px 40px' }}>
+                        style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, var(--foreground) 1px, transparent 0)', backgroundSize: '40px 40px' }}>
                     </div>
 
                     {/* Top Section: Content & Image */}
                     <div className="flex flex-col md:flex-row flex-grow relative z-10">
                         {/* Image Side (Left) */}
-                        <div className="w-full md:w-1/2 bg-gradient-to-br from-[#0F1115] to-[#1a1d26] relative flex items-center justify-center p-8 md:p-12 overflow-hidden group border-r border-white/5 min-h-[300px] md:min-h-0">
+                        <div className="w-full md:w-1/2 bg-secondary relative flex items-center justify-center p-8 md:p-12 overflow-hidden group border-r border-border min-h-[300px] md:min-h-0">
                             <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                             <div className="w-64 h-64 bg-accent/20 rounded-full blur-[80px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse-slow"></div>
 
                             {/* Large Animated Icon */}
                             <div className="relative z-10 transform transition-all duration-700 group-hover:scale-110 group-hover:rotate-3">
                                 {React.createElement(steps[currentStep].icon, {
-                                    className: "w-32 h-32 md:w-40 md:h-40 text-white/90 drop-shadow-[0_0_40px_rgba(37,99,235,0.6)]"
+                                    className: "w-32 h-32 md:w-40 md:h-40 text-foreground/90 drop-shadow-[0_0_40px_rgba(37,99,235,0.2)]"
                                 })}
                             </div>
 
                             {/* Decorative floating elements */}
                             <div className="absolute top-10 right-10 w-2 h-2 md:w-3 md:h-3 rounded-full bg-accent animate-bounce shadow-[0_0_10px_rgba(37,99,235,0.8)]"></div>
-                            <div className="absolute bottom-10 left-10 w-3 h-3 md:w-4 md:h-4 rounded-full bg-white/20 animate-pulse"></div>
+                            <div className="absolute bottom-10 left-10 w-3 h-3 md:w-4 md:h-4 rounded-full bg-foreground/20 animate-pulse"></div>
                         </div>
 
                         {/* Content Side (Right) */}
@@ -148,13 +148,13 @@ const HowItWorks = () => {
                                     <span className="text-accent text-xs md:text-sm font-bold tracking-widest uppercase bg-accent/10 px-3 py-1 rounded-full border border-accent/20 shadow-[0_0_10px_rgba(37,99,235,0.2)]">
                                         Step {currentStep + 1}
                                     </span>
-                                    <div className="h-[1px] flex-grow bg-gradient-to-r from-white/10 to-transparent"></div>
+                                    <div className="h-[1px] flex-grow bg-gradient-to-r from-border to-transparent"></div>
                                 </div>
 
-                                <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                                <h3 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
                                     {steps[currentStep].title}
                                 </h3>
-                                <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-lg">
+                                <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-lg">
                                     {steps[currentStep].description}
                                 </p>
                             </div>
@@ -163,7 +163,7 @@ const HowItWorks = () => {
                             <div className="flex items-center gap-4 mt-auto">
                                 <button
                                     onClick={prevStep}
-                                    className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors backdrop-blur-sm group"
+                                    className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-secondary transition-colors backdrop-blur-sm group"
                                 >
                                     <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 group-hover:-translate-x-1 transition-transform" />
                                 </button>
